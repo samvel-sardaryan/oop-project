@@ -55,13 +55,13 @@ public class GameGUI extends JFrame {
         hpLabel = new JLabel();
         hpLabel.setForeground(Color.WHITE);
         nameField = new JTextField(20);
-        ImageIcon playerIcon = new ImageIcon("Dungeons & Dragons/gfx/player.png");
-        ImageIcon npcIcon = new ImageIcon("Dungeons & Dragons/gfx/npc.png");
-        ImageIcon monsterIcon = new ImageIcon("Dungeons & Dragons/gfx/monster.png");
-        ImageIcon snakeIcon = new ImageIcon("Dungeons & Dragons/gfx/snake.png");
-        ImageIcon trapIcon = new ImageIcon("Dungeons & Dragons/gfx/trap.png");
-        libraryBackgroundImage = new ImageIcon("Dungeons & Dragons/gfx/library.png").getImage();
-        forestBackgroundImage = new ImageIcon("Dungeons & Dragons/gfx/forest.png").getImage();
+        ImageIcon playerIcon = new ImageIcon("oop-project/gfx/player.png");
+        ImageIcon npcIcon = new ImageIcon("oop-project/gfx/npc.png");
+        ImageIcon monsterIcon = new ImageIcon("oop-project/gfx/monster.png");
+        ImageIcon snakeIcon = new ImageIcon("oop-project/gfx/snake.png");
+        ImageIcon trapIcon = new ImageIcon("oop-project/gfx/trap.png");
+        libraryBackgroundImage = new ImageIcon("oop-project/gfx/library.png").getImage();
+        forestBackgroundImage = new ImageIcon("oop-project/gfx/forest.png").getImage();
         Image playerImage = playerIcon.getImage().getScaledInstance(700, 700, Image.SCALE_SMOOTH);
         Image npcImage = npcIcon.getImage().getScaledInstance(700, 700, Image.SCALE_SMOOTH);
         Image monsterImage = monsterIcon.getImage().getScaledInstance(700, 700, Image.SCALE_SMOOTH);
@@ -191,8 +191,8 @@ public class GameGUI extends JFrame {
             hpLabel.setVisible(true);
             updateHPLabel();
             greetButton.setVisible(true);
-            questSystem.loadQuestsFromFile("Dungeons & Dragons/textfiles/quests.txt");
-            puzzleSystem.loadPuzzlesFromFile("Dungeons & Dragons/textfiles/puzzles.txt");
+            questSystem.loadQuestsFromFile("oop-project/textfiles/quests.txt");
+            puzzleSystem.loadPuzzlesFromFile("oop-project/textfiles/puzzles.txt");
             playerPanel.setVisible(true);
             npcPanel.setVisible(true);
         } else {
