@@ -42,57 +42,12 @@ public class Player extends Character {
         return charisma;
     }
 
-    public void openDoor() {
-        System.out.println(getName() + " attempts to break down a door using their strength.");
-        if (strength >= 15) {
-            System.out.println("The door breaks open");
+    public boolean attack(Character target, int sides) {
+        int attackRoll = Dice.roll(sides);
+        if (attackRoll + getStrength() >= target.getAC()) {
+            return true;
         } else {
-            System.out.println("The door holds strong against your efforts");
-        }
-    }
-
-    public void pickLock() {
-        System.out.println(getName() + " attempts to pick a lock using their dexterity.");
-        if (dexterity >= 15) {
-            System.out.println("You successfully pick the lock");
-        } else {
-            System.out.println("The lock proves too difficult to pick");
-        }
-    }
-
-    public void resistPoison() {
-        System.out.println(getName() + " attempts to resist poison using their constitution.");
-        if (constitution >= 15) {
-            System.out.println("You successfully resist the poison");
-        } else {
-            System.out.println("The poison courses through your veins");
-        }
-    }
-
-    public void solvePuzzle() {
-        System.out.println(getName() + " attempts to solve a puzzle using their intelligence.");
-        if (intelligence >= 15) {
-            System.out.println("You solve the puzzle with ease");
-        } else {
-            System.out.println("The puzzle remains unsolved");
-        }
-    }
-
-    public void detectTraps() {
-        System.out.println(getName() + " attempts to detect hidden traps using their wisdom.");
-        if (wisdom >= 15) {
-            System.out.println("You detect hidden traps in the area");
-        } else {
-            System.out.println("You do not detect any hidden traps");
-        }
-    }
-
-    public void persuadeOther() {
-        System.out.println(getName() + " attempts to persuade someone using their charisma.");
-        if (charisma >= 15) {
-            System.out.println("Your charm wins them over");
-        } else {
-            System.out.println("Your words fail to persuade them");
+            return false;
         }
     }
 }

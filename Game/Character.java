@@ -1,6 +1,6 @@
 package Game;
 
-public class Character {
+public abstract class Character {
     protected String name;
     protected int hp;
     protected int ac;
@@ -23,23 +23,10 @@ public class Character {
         return ac;
     }
 
-    public boolean attack(Character target, int sides) {
-        int attackRoll = Dice.roll(sides);
-        if (attackRoll >= target.getAC()) {
-            System.out.println(name + " hits " + target.getName());
-            return true;
-        } else {
-            System.out.println(name + " misses " + target.getName());
-            return false;
-        }
-    }
+    public abstract boolean attack(Character target, int sides);
 
-    public void takeDamage(int damage) {
+    public int takeDamage(int damage) {
         hp -= damage;
-        if (hp <= 0) {
-            System.out.println(name + " has been defeated");
-        } else {
-            System.out.println(name + " takes " + damage + " damage. HP: " + hp);
-        }
+        return hp;
     }
 }
