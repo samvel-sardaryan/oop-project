@@ -1,0 +1,11 @@
+Quest 1:
+Title: The Haunted Ruins
+Description: Rumors speak of a haunted ruins deep in the mountains. Explore the ruins, uncover their secrets, and put any restless spirits to rest.
+
+Quest 2:
+Title: The Enchanted Forest
+Description: The forest has become enchanted, causing strange phenomena and endangering travelers. Discover the source of the enchantment and restore the forest to its natural state.
+
+Quest 3:
+Title: The Beast of the Swamp
+Description: A terrifying creature has been sighted in the swamp, terrorizing local villages. Track down the beast, confront it, and protect the villagers from its rampage.
